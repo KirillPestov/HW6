@@ -4,7 +4,7 @@ import ru.netology.stats.StatsService;
 public class StatsServiceTest {
 
     @Test
-    public void TestMinSails () {
+    public void testMinSails () {
         StatsService service = new StatsService ();
 
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
@@ -16,7 +16,7 @@ public class StatsServiceTest {
         Assertions.assertEquals(expected, actualSales);
     }
     @Test
-    public void TestMaxSails () {
+    public void testMaxSails () {
         StatsService service = new StatsService ();
 
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
@@ -28,52 +28,52 @@ public class StatsServiceTest {
         Assertions.assertEquals(expected, actualSales);
     }
     @Test
-    public void TestAllSails () {
+    public void testAllSails () {
         StatsService service = new StatsService ();
 
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         long expected = 180;
-        long actualSales = service.AllSales(sales);
+        long actualSales = service.allSales(sales);
 
         System.out.println("сумма всех продаж " + actualSales);
         Assertions.assertEquals(expected, actualSales);
     }
 
     @Test
-    public void AverageSales () {
+    public void averageSales () {
         StatsService service = new StatsService ();
 
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         long expected = 15;
-        long actualSales = service.AverageSales(sales);
+        long actualSales = service.averageSales(sales);
 
         System.out.println("средняя сумма продаж в месяц " + actualSales);
         Assertions.assertEquals(expected, actualSales);
     }
 
     @Test
-    public void HighAverageSales () {
+    public void highAverageSales () {
         StatsService service = new StatsService ();
 
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expected = 5;
-        int actualSales = service.HighAverageSales(sales);
+        int actualSales = service.highAverageSales(sales);
 
         System.out.println("количество месяцев, продажи ниже стреднего " + actualSales);
         Assertions.assertEquals(expected, actualSales);
     }
 
     @Test
-    public void LowAverageSales () {
+    public void lowAverageSales () {
         StatsService service = new StatsService ();
 
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expected = 5;
-        int actualSales = service.LowAverageSales(sales);
+        int actualSales = service.lowAverageSales(sales);
 
         System.out.println("количество месяцев, продажи выше стреднего " + actualSales);
         Assertions.assertEquals(expected, actualSales);
